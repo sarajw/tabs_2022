@@ -13,7 +13,7 @@
 	--b2top: hsl(200, 15%, 60%);
 	
 	/* scaling */
-	--tabheight: clamp(30px, 5vw, 50px);
+	--tabheight: clamp(30px, 6vw, 45px);
 	
 	/* fonts */
 	--normal: 300;
@@ -81,11 +81,12 @@ header {
 }
 
 #name, nav, section h2 {
-	line-height: calc(var(--tabheight) + 0.5rem);
+	line-height: var(--tabheight);
 }
 
 #name {
-	font-size: clamp(1.1rem, 4.75vw, 2rem);
+	font-size: clamp(1rem, 4.75vw, 2rem);
+	text-transform: lowercase;
 }
 
 nav {
@@ -99,24 +100,7 @@ nav ul {
 
 nav ul li {
 	display: inline-block;
-	margin: 0 0.25em;
-}
-
-#hero {
-	background-color: var(--header);
-	margin: 0 auto;
-	height: 100vh;
-}
-
-#hero p {
-	text-align: center;
-	line-height: 50vh;
-}
-
-section {
-	min-height: calc(100vh - 0.5rem - var(--tabheight));
-	padding: 0.5rem 1em var(--tabheight);
-	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
+	margin-left: 0.5em;
 }
 
 .tab {
@@ -130,7 +114,7 @@ section {
 	height: var(--tabheight);
 	line-height: var(--tabheight);
 	padding: 0 0.25em;
-	font-size: clamp(1rem, 4vw, 2.2rem);
+	font-size: clamp(0.9rem, 5vw, 2.2rem);
 	text-transform: uppercase;
 	text-align: center;
 	border-top-left-radius: 0.5rem;
@@ -145,6 +129,13 @@ section {
 	height: 0.5rem;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
+}
+
+section {
+	position: sticky;
+	min-height: calc(100vh - 0.5rem - var(--tabheight));
+	padding: 0.5rem 1em calc(1.5 * var(--tabheight));
+	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
 }
 
 section > article {
@@ -215,6 +206,20 @@ a img {
 	background-color: var(--background);
 }
 
+
+
+#hero {
+	top: 0;
+	background-color: var(--header);
+	margin: 0 auto;
+	height: 100vh;
+}
+
+#hero p {
+	text-align: center;
+	line-height: 50vh;
+}
+
 .sara {
 	z-index: 11;
 }
@@ -227,12 +232,17 @@ a img {
 }
 #sara {
 	z-index: 1;
+	top: calc(var(--tabheight) + 0.5rem);
 	background-color: var(--sara);
 }
 #sara img {
 	display: block;
 	margin: 0 auto;
 	max-height: 30%;
+}
+#gosara {
+	position: absolute;
+	top: calc(100vh - var(--tabheight));
 }
 
 .work {
