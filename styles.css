@@ -126,7 +126,7 @@ section {
 	pointer-events: none; 
 }
 .tab h2 {
-	width: 20%;
+	width: 18%;
 	height: var(--tabheight);
 	line-height: var(--tabheight);
 	padding: 0 0.25em;
