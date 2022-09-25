@@ -6,10 +6,11 @@
 	--links: hsl(200, 15%, 20%);
 	--hover: hsl(200, 15%, 40%);
 	--header: hsl(200, 15%, 85%);
-	--intro: hsl(200, 15%, 80%);
-	--stuff: hsl(200, 15%, 75%);
-	--contact: hsl(200, 15%, 70%);
-	--b2top: hsl(200, 15%, 65%);
+	--sara: hsl(200, 15%, 80%);
+	--work: hsl(200, 15%, 75%);
+	--blog: hsl(200, 15%, 70%);
+	--find: hsl(200, 15%, 65%);
+	--b2top: hsl(200, 15%, 60%);
 	
 	/* scaling */
 	--tabheight: clamp(30px, 5vw, 50px);
@@ -28,10 +29,11 @@
 		--links: hsl(200, 15%, 80%);
 		--hover: hsl(200, 15%, 600%);
 		--header: hsl(200, 15%, 15%);
-		--intro: hsl(200, 15%, 20%);
-		--stuff: hsl(200, 15%, 25%);
-		--contact: hsl(200, 15%, 30%);
-		--b2top: hsl(200, 15%, 35%);
+		--sara: hsl(200, 15%, 20%);
+		--work: hsl(200, 15%, 25%);
+		--blog: hsl(200, 15%, 30%);
+		--find: hsl(200, 15%, 35%);
+		--b2top: hsl(200, 15%, 40%);
 	}
 }
 
@@ -103,6 +105,7 @@ nav ul li {
 #hero {
 	background-color: var(--header);
 	margin: 0 auto;
+	height: 100vh;
 }
 
 #hero p {
@@ -112,8 +115,7 @@ nav ul li {
 
 section {
 	min-height: calc(100vh - 0.5rem - var(--tabheight));
-	min-height: calc(100dvh - 0.5rem - var(--tabheight));
-	padding-bottom: var(--tabheight);
+	padding: 0.5rem 1em var(--tabheight);
 	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
 }
 
@@ -128,7 +130,7 @@ section {
 	height: var(--tabheight);
 	line-height: var(--tabheight);
 	padding: 0 0.25em;
-	font-size: clamp(0.9rem, 3vw, 2rem);
+	font-size: clamp(1.2rem, 4vw, 2.2rem);
 	text-transform: uppercase;
 	text-align: center;
 	border-top-left-radius: 0.5rem;
@@ -181,58 +183,6 @@ a img {
 	max-width: 100%;
 }
 
-.backtotop {
-	position: absolute;
-	height: 2rem;
-	width: 2rem;
-	bottom: 1rem;
-	left: calc(50% - 1rem);
-	text-align: center;
-	font-size: 1.5rem;
-	font-weight: var(--normal);
-	line-height: 2rem;
-	border-radius: 50%;
-	background-color: var(--b2top);
-}
-.backtotop:hover {
-	background-color: var(--background);
-}
-
-.intro {
-	z-index: 11;
-}
-.intro h2 {
-	margin-inline: auto 40%;
-	background-color: var(--intro);
-}
-.intro::after {
-	background-color: var(--intro);
-}
-#intro {
-	z-index: 1;
-	background-color: var(--intro);
-}
-#intro img {
-	display: block;
-	margin: 0 auto;
-	max-height: 30%;
-}
-
-.stuff {
-	z-index: 12;
-}
-.stuff h2 {
-	margin-inline: auto 20%;
-	background-color: var(--stuff);
-}
-.stuff::after {
-	background-color: var(--stuff);
-}
-#stuff {
-	z-index: 2;
-	background-color: var(--stuff);
-}
-
 .cardcontent {
 	height: calc(100% - 3.5rem);
 	width: 95%;
@@ -247,19 +197,87 @@ a img {
 	margin: 0.5rem;
 }
 
-.contact {
+.backtotop {
+	position: absolute;
+	height: 2rem;
+	width: 2rem;
+	bottom: 1rem;
+	left: calc(50% - 1rem);
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: var(--normal);
+	line-height: 2rem;
+	border-radius: 50%;
+	background-color: var(--b2top);
+}
+
+.backtotop:hover {
+	background-color: var(--background);
+}
+
+.sara {
+	z-index: 11;
+}
+.sara h2 {
+	margin-inline: auto 45%;
+	background-color: var(--sara);
+}
+.sara::after {
+	background-color: var(--sara);
+}
+#sara {
+	z-index: 1;
+	background-color: var(--sara);
+}
+#sara img {
+	display: block;
+	margin: 0 auto;
+	max-height: 30%;
+}
+
+.work {
+	z-index: 12;
+}
+.work h2 {
+	margin-inline: auto 30%;
+	background-color: var(--work);
+}
+.work::after {
+	background-color: var(--work);
+}
+#work {
+	z-index: 2;
+	background-color: var(--work);
+}
+
+.blog {
 	z-index: 13;
 }
-.contact h2 {
-	margin-inline: auto 0;
-	background-color: var(--contact);
+.blog h2 {
+	margin-inline: auto 15%;
+	background-color: var(--blog);
 }
-.contact::after {
-	background-color: var(--contact);
+.blog::after {
+	background-color: var(--blog);
+}
+#blog {
+	z-index: 3;
+	background-color: var(--blog);
+}
+
+.find {
+	z-index: 14;
+}
+.find h2 {
+	margin-inline: auto 0;
+	background-color: var(--find);
+}
+.find::after {
+	background-color: var(--find);
 	border-top-right-radius: 0;
 }
-#contact {
-	z-index: 3;
-	background-color: var(--contact);
+#find {
+	z-index: 4;
+	background-color: var(--find);
 }
 
