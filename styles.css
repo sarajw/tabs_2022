@@ -235,14 +235,26 @@ a img {
 	top: calc(var(--tabheight) + 0.5rem);
 	background-color: var(--sara);
 }
-#sara img {
-	display: block;
+
+.welcome {
+	display: flex;
+	justify-content: space-between;
+}
+.welcome .blurb {
+	flex: 3;
+}
+.welcome img {
+	height: 50vmin;
+	min-height: 122.5px;
 	margin: 0 auto;
-	max-height: 30%;
+}
+.signoff {
+	text-align: right;
 }
 #gosara {
+	height: 0;
 	position: absolute;
-	top: calc(100vh - var(--tabheight));
+	top: calc(100vh - 0.5rem - var(--tabheight));
 }
 
 .work {
@@ -287,7 +299,8 @@ a img {
 	border-top-right-radius: 0;
 }
 #find {
-	z-index: 4;
+	top: 0;
+	z-index: 14;
 	background-color: var(--find);
 }
 
